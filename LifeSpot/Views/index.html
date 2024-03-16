@@ -5,20 +5,13 @@
     <title>LifeSpot</title>
     <!-- Задание 27.1.4 Подключение стилей по относительному пути из внешнего файла -->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    
+    <!-- Подключили скрипты JS -->
+    <script type="text/javascript" src="../Static/JS/index.js"></script> 
 
     <script>
-        // Проверка на возраст
-        checkAge();
-
-        // сохранение сессии
-        handleSession();
-
-        // вывод данных сессии в консоль
-        sessionLog();
-
-        let inputParseFunction;
+        // обработка сессии
+        handleSession(logger, checker /* Коллбек-функции */);
     </script>
 </head>
 <body>
