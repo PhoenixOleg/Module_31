@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeSpot</title>
+    <!-- Задание 27.1.4 Подключение стилей по относительному пути из внешнего файла -->
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+
+    <!-- Задание 29.1.2 Внутренний скрипт с вызовами функций -->
+    <script>
+        // Проверка на возраст
+        //checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        let inputParseFunction; //Задание 29.5.4
+    </script>
+</head>
+<body>
+    <!-- Задание 26.5.4. Сделайте шапку (или заголовок) сайта -->
+    <!--Хедер страницы находится сразу над тегом body-->
+    <header id="header-index">
+        <!--Заголовок страницы-->
+        <h1>LifeSpot - прямые трансляции с улиц</h1>
+        <!--Параграф-->
+        <p>Покажем, что происходит прямо сейчас</p>
+    </header>
+
+    <!--SIDEBAR-->
+    <!-- Задание 26.5.6 Сайд-бар страницы -->
+    <!-- Задание 27.3.3 + Задание 27.3.4 Сайд-бар страницы (пока все ссылки ведут на главную)-->
+    <!-- Заменил на отдельную страницу с боковым меню
+        <aside id="sidebar">
+        <div class="navbar">
+            <a href="/"><p>Все трансляции</p></a>
+            <a href="/"><p>О проекте</p></a>
+        </div>
+    </aside>-->
+    <!-- Доп задание на строку поиска пока без поиска, но с эффектом hover -->
+    <div class="search">
+        <input type="search" oninput="
+
+    inputParseFunction = getUserInput();
+    filterContent();
+
+    " placeholder="Поиск" size=50% />
+    </div>
+
+    <!-- Задание 26.4.3. Добавьте вместо кнопок элементы iframe с трансляциями -->
+    <!-- Задание 26.4.4. iframe завернуть в div + стиль + описание видео -->
+    <div class="bordered">
+        <div class="video-container">
+            <iframe width="500" height="310" src="https://www.youtube.com/embed/dhVzWNos718" title="🕹 LIVE CAMERA PTZ Amazing St. Petersburg Russia Live Chat. Невский пейзаж Санкт-Петербург живой чат" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="video-title">Санкт-Петербург, Невский пейзаж (Live!)</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="500" height="310" src="https://www.youtube.com/embed/UVftxDFol90" title="EarthCam Live:  Times Square in 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="video-title">Нью-Йорк, Таймс-сквер (Live!)</h3>
+        </div>
+        <div class="video-container">
+            <iframe width="500" height="310" src="https://www.youtube.com/embed/JplMzss6_YE" title="London Bus Ride 🇬🇧 - ENTERING EVERY BUS - Empty London Lockdown Tour - London Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h3 class="video-title">Лондон, Автбусный маршрут (запись)</h3>
+        </div>
+    </div>
+        <!--FOOTER-->
+        <!-- Задание 26.5.5 Сделайте футер -->
+        <!--Футер страницы находится под основной частью (body)-->
+        <!--
+            Тоже заменил на отдельную страницу с "подвалом"
+            <footer>
+            <p>LifeSpot - все права защищены</p>
+            <p>Связаться с нами: contact@lifespot.ru</p>
+        </footer>-->
+</body>
+</html>

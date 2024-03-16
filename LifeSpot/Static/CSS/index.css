@@ -1,0 +1,111 @@
+﻿/*Задание 26.4.4 Общее свойство iframe-контейнеров - чтобы в строку*/
+.video-container { /* Это класс*/
+    display: inline-block;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.navbar { /* Это класс*/
+    color: darkgray;
+    padding-left: 15%;
+}
+
+    /* Стили панели навигации */
+    .navbar p { /* Это класс*/
+        color: darkgray;
+        padding-left: 15%;
+    }
+        /*Задание 27.3.3 Добавьте эффекты к надписям на панели навигации, чтобы при наведении они подсвечивались.*/
+        /* Стили панели навигации при наведении мышью */
+        .navbar p:hover { /* Это класс + тег -> наведение */
+            color: aliceblue;
+        }
+
+/* Задание 27.4.4 - Глобальные стили для хедеров на всём сайте*/
+header { /* А это тег! */
+    color: black;
+    padding-left: 1%;
+    padding-top: 1.2%;
+}
+
+/* Задание 27.4.4 - Стиль хедера для главной страницы имеет приоритет,
+так как используется селектор по идентификатору*/
+#header-index { /* Это id-селектор*/
+    color: #44453f;
+}
+
+/* Задание 26.5.5 Сделайте футер */
+footer { /* А это тег! */
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    color: dimgrey;
+    line-height: 66%; /* Задание 27.6.3 - Уменьшите межстрочный интервал в блоке с копирайтом на треть (100% - 33%) */
+    padding-left: 1%; /* Задание 27.7.3 - Выровняйте футер сайта относительно верхнего контента*/
+}
+
+aside { /* А это тег! */
+    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+    width: 10%;
+    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+    top: 0; /* Сайдбар будет в самой верхней части страницы */
+    left: 0;
+    background-color: #111; /* Черный цвет фона (задан в виде кода) */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    padding-top: 2%;
+    font-size: medium; /*тут поменял с large*/
+}
+
+body { /* А это тег! */
+    padding-left: 11%;
+}
+
+/* Задание 27.2.4 Комбинированный селектор - применяется ко всем элементам - изменение текста*/
+header, footer, aside, body, .navbar, .video-container {
+    font-family: "Helvetica 65 Medium", sans-serif;
+}
+
+/* Задание 27.5.3 - замените фон всех элементов нашей страницы кроме сайд-бара с белого на любой другой*/
+header, footer, body, .video-container {
+    background-color: linen;
+}
+
+<!-- Доп задание на строку поиска пока без поиска, но с эффектом hover -->
+.search {
+    padding-left: 1%;
+}
+
+.search input {
+    margin-left: 1%;
+    color: #000;
+}
+
+    .search input:hover { /* Это класс + тег -> наведение */
+        background-color: lightblue; /*color : #ff0000;*/
+    }
+
+.video-title { /* А это Класс */
+    font-style: italic;
+    text-align: center;
+}
+
+.reviews {
+    padding-left: 1%;
+}
+
+.reviews-caption {
+    font-style:italic;
+}
+.review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-top: 1%;
+    margin-bottom: 1em;
+}
+
+.review-text {
+    border-color: darkkhaki;
+    border-bottom-style: solid;
+    border-width:thin;
+}
