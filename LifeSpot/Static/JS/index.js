@@ -5,7 +5,6 @@
 let session = new Map();
 
 /*
-* Задание 29.1.1
 * Функция для фильтрации контента
 * Будет вызываться благодаря атрибуту oninput на index.html
 */
@@ -29,12 +28,6 @@ function filterContent() {
     }
 }
 
-/*
-* Задание 29.1.2
-* Функция для проверки и сохранения  данных пользователя
-* Также блокирует доступ к сайту лицам, не подтвердившим свой возраст
-*/
-
 function handleSession() {
     // Сохраним время начала сессии
     session.set("startDate", new Date().toLocaleString())
@@ -56,7 +49,6 @@ function checkAge() {
     }
 }
 
-//Задание 29.3.8
 const sessionLog = function logSession() {
     // Вывод в консоль
     for (let result of session) {
