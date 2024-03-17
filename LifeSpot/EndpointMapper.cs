@@ -15,7 +15,7 @@ namespace LifeSpot
         /// </summary>
         public static void MapCss(this IEndpointRouteBuilder builder)
         {
-            var cssFiles = new[] { "index.css" };
+            var cssFiles = new[] { "index.css", "slider.css" };
 
             foreach (var fileName in cssFiles)
             {
