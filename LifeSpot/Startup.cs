@@ -24,10 +24,10 @@ namespace LifeSpot
             app.UseEndpoints(endpoints =>
             {
                 // Маппинг статических файлов
-
                 endpoints.MapCss();
                 endpoints.MapJs();
-                endpoints.MapHtml();
+                EndpointMapper. MapPic(app, env);
+                endpoints.MapHtml();                
             });
         }
     }

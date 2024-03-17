@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.FileProviders;
 using System.IO;
 using System.Text;
 
@@ -42,6 +44,18 @@ namespace LifeSpot
                     await context.Response.WriteAsync(js);
                 });
             }
+        }
+
+        /// <summary>
+        ///  Маппинг картинок
+        /// </summary>
+        public static void MapPic(this IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseStaticFiles(new StaticFileOptions
+            {                  
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Static", "IMG")),
+                RequestPath = "/Static/IMG"
+            });
         }
 
         /// <summary>
