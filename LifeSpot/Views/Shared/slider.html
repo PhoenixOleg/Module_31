@@ -3,7 +3,7 @@
     <div class="slider-buttons-wrapper">
         <div class="slider-items-wrapper">
             <div class="slider-item">
-                <img src="../Static/IMG/spb.jpg" alt="Saint-Petersburg" />
+                <img src="../Static/IMG/spb.jpg" alt="Saint-Petersburg" id="target" />
             </div>
             <div class="slider-item">
                 <img src="../Static/IMG/ny.jpg" alt="New-York" />
@@ -13,16 +13,18 @@
             </div>
         </div>
 
-        <button class="nav-button nav-button-prev" id="bt-prev"><<</button>
-        <button class="nav-button nav-button-next" id="bt-next">>></button>
+        <button class="nav-button nav-button-prev" onclick="goBack()" id="bt-prev"><<</button>
+        <button class="nav-button nav-button-next" onclick="goForward()" id="bt-next">>></button>
 
         <div class="indicators-container">
-            <span><button class="slider-indicator"></button></span>
-            <span><button class="slider-indicator slider-indicator-selected"></button></span>
-            <span><button class="slider-indicator"></button></span>
+            <span><button class="slider-indicator" onclick ="change(0)" id="0"></button></span>
+            <span><button class="slider-indicator" onclick ="change(1)" id="1"></button></span>
+            <span><button class="slider-indicator" onclick ="change(2)" id="2"></button></span>
         </div>
     </div>
-    <h4>%TownName%</h4>
+    <h4 id="activeTownName"></h4>
 </div>
 
+<!-- Если поместить перед контентом, то работать не будет, т. е. ничего еще нет -->
+<script type="text/javascript" src="../Static/JS/slider.js"></script>
 
